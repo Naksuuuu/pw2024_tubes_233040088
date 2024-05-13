@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 12, 2024 at 01:15 PM
+-- Generation Time: May 13, 2024 at 09:44 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -29,10 +29,10 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `products` (
   `id` int NOT NULL,
-  `name` varchar(100) DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `description` text,
   `price` decimal(10,2) DEFAULT NULL,
-  `image_data` longblob,
+  `image_data` varchar(255) DEFAULT NULL,
   `user_id` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -57,8 +57,8 @@ CREATE TABLE `transactions` (
 
 CREATE TABLE `users` (
   `id` int NOT NULL,
-  `username` varchar(50) DEFAULT NULL,
-  `password` varchar(100) DEFAULT NULL,
+  `username` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `access_role` enum('admin','user') DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 

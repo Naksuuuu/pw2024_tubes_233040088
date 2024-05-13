@@ -1,0 +1,14 @@
+section {
+  padding: 80px 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section#home {
+  background-color: #ffafcc;
+}
+
+section#home .container-fluid {
+}
