@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --bg-default: #ffffff;
+  --bg-primary: #ffafcc;
+  --bg-secondary: #7bdff2;
+  --bg-third: #936639;
+  --color-primary: #000814;
+  --color-secondary: #a52a2a;
+  --shadow-primary: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+  --shadow-secondary: 0px -10px 45px 40px white;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+section#user td,
+section#category td,
+section#list-product td {
+  vertical-align: middle;
+}
+
+/* sidebar */
+nav#sidebar {
+  background-color: pink;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  width: 200px;
+  left: 0;
+  transition: left 0.2s ease;
+}
+
+nav#sidebar .container {
+  padding: 80px 0;
+}
+
+@media screen and (max-width: 768px) {
+  nav#sidebar {
+    width: 140px;
+  }
+}
+
+.link-sidebar {
+  color: white;
+}
+
+.menus {
+  width: 80%;
+}
+
+.page-link {
+  text-align: center;
+  margin-top: 4px;
+  padding: 4px;
+}
+
+.page-link h6 {
+  margin-bottom: 0;
+}
+
+/* end sidebar */
+
+/* main section */
+section {
+  position: relative;
+  margin-left: 200px;
+  transition: margin-left 0.2s ease;
+  padding: 80px 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    margin-left: 100px;
+  }
+}
+
+.menus-info {
+  position: absolute;
+  top: 40px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.menus-info i {
+  font-size: 34px;
+  cursor: pointer;
+}
+
+/* form search */
+.search-bar form ul li {
+  height: 30px;
+}
+
+.search-bar form ul li input {
+  border-radius: 5px;
+  outline: none;
+  border-width: 1px;
+}
+
+.bx-search {
+  font-size: 30px;
+}
+
+/* tables adjusment */
+.tables-scroll {
+  height: 55vh;
+  overflow-y: scroll;
+}
+
+/* page change */
+
+/* body */
+
+body.page-change {
+  background-color: #eeedeb;
+  min-height: 100vh;
+}
+
+/* card-product-change */
+.card-product-change {
+  width: 30vw;
+  box-shadow: 10px 8px 26px -8px rgba(0, 0, 0, 0.75);
+  background-color: #eef7ff;
+}
+
+/* end main container */
+
+@media screen and (max-width: 700px) {
+}
