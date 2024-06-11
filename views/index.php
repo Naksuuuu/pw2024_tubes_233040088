@@ -5,6 +5,10 @@ if (!isset($_SESSION["login"])) {
   header('location: ../lib/login.php');
 }
 
+if ($_SESSION['role'] != 'user') {
+  header('location: dashboard.php');
+}
+
 $rawData = pagedata('SELECT products.id, products.name AS product_name , products.price AS product_price, products.image_data AS product_image , category.category_name AS category_name
 FROM products
 JOIN category ON products.id_category = category.id
